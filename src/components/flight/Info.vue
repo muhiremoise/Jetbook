@@ -2,18 +2,11 @@
 	<div>
 		<el-row>
 			<el-col :span="2" align="middle" class="airline-logo">
-				<div 
-					v-for="(logo, index) in logoAirlines"
-					v-if="index < 2">
-					<img 
-						v-if="logoAirlines.length > 1"
-					 :src="logo.src"
-					 :alt="logo.name"
-					 :class="'logo logo-' + index" />
-					 <img v-else
-					 :src="logo.src"
-					 :alt="logo.name"
-					 class="logo single" />
+				<div  v-for="(logo, index) in logoAirlines" :key="logo">
+					<div v-if="index < 2" class="">
+						<img v-if="logoAirlines.length > 1" :src="logo.src" :alt="logo.name" :class="'logo logo-' + index" />
+						<img v-else :src="logo.src" :alt="logo.name" class="logo single" />
+					</div>
 				</div>
 			</el-col>
 			<el-col :span="22">
@@ -27,13 +20,11 @@
 			        	{{ firstFly.flyFrom }}
 			        </span>
 			      </div>
-			      <template 
-			      	v-for="(route, index) in info" 
-			      	v-if="index !== 0">
-				      <div class="divider">
+			      <template v-for="(route, index) in info">
+				      <div class="divider"  :key="route"  v-if="index !== 0">
 				      	<span class="plane"></span>
 				      </div>
-				      <div class="segment adaptive">
+				      <div class="segment adaptive"  :key="route">
 				        <span class="airport">
 				        	{{ route.flyFrom }}
 				        </span>
