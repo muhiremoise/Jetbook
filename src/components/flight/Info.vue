@@ -23,7 +23,7 @@
 			      <template v-for="(route, index) in info">
 				      <div class="divider"  :key="route"  v-if="index !== 0">
 				      	<span class="plane"></span>
-				      </div>
+				      </div>						
 				      <div class="segment adaptive"  :key="route">
 				        <span class="airport">
 				        	{{ route.flyFrom }}

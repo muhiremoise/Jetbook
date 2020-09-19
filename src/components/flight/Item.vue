@@ -5,7 +5,7 @@
 				<div slot="collapse-header">
 					<el-row :gutter="5" type="flex" align="middle" justify="center">
 						<el-col :span="5" align="middle">
-							<div class="flight-price">{{ price }}</div>
+							<div class="flight-price">{{ price }} €</div>
 						</el-col>
 						<el-col :span="18">
 							<a href="#">
@@ -49,7 +49,7 @@
 						</el-col>
 						<el-col v-else :span="12" align="middle" justify="center">
 							<br/>
-							<h3 class="flight-price">{{ price }}</h3>
+							<h3 class="flight-price">{{ price }} €</h3>
 							<a :href="item.deep_link" target="_blank">
 								<el-button type="primary" size="large">Book flight</el-button>
 							</a>
@@ -62,12 +62,12 @@
 									type="primary"
 									size="large"
 									class="fluid">
-									Book this flight for {{ price }}
+									Book this flight for {{ price }} €
 								</el-button>
 							</a>
 						</el-col>
 						<el-col  :span="18" align="end">
-							<div class="flight-price">{{ price }}</div>
+							<div class="flight-price">{{ price }} €</div>
 						</el-col>
 					</el-row>
 				</div>
@@ -108,7 +108,7 @@ export default {
 			}
 		},
 		price() {
-			return numeral(this.item.price).format('$0,0')
+			return numeral(this.item.price).format('0,0')
 		},
 		routeDepart() {
 			return this.item.route.filter((route) => route.return === 0)
