@@ -192,8 +192,8 @@ export default {
       returnDate: currentDate(3),
       flightSearch: {
         typeFlight: 'oneway',
-        flyFrom: 'london_gb',
-        flyTo: 'paris_fr',
+        flyFrom: 'KGL',
+        flyTo: 'DXB',
         dateFrom: currentDate(1),
         dateTo: '',
         returnFrom: currentDate(3),
@@ -236,8 +236,11 @@ export default {
       disableReturn: true,
       loading: false,
       places: [
-        {id: 'london_gb', value: 'London', parentId: 'GB'},
-        {id: 'paris_fr', value: 'Paris', parentId: 'FR'}
+        {id: 'KGL', value: 'Kigali', parentId: ''},
+        {id: 'NBO', value: 'Nairobi', parentId: ''},
+        {id: 'EBB', value: 'Entebbe', parentId: ''},
+        {id: 'DAR', value: 'Dar es salaam', parentId: ''},
+        {id: 'MAD', value: 'Madrid', parentId: ''}
       ]
     }
   },
