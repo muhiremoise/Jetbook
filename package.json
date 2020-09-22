@@ -1,7 +1,7 @@
 {
-  "name": "Jetbook",
+  "name": "sunnybook",
   "description": "Flight ticket book with Kiwi API + Vuejs",
-  "author": "Conikal <developer@conikal.com>",
+  "author": "Umbrella ( hello@umbrellagrp.rw )",
   "private": true,
   "scripts": {
     "dev": "node server",
@@ -66,5 +66,16 @@
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.1.1",
     "webpack-node-externals": "^1.6.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umbrella-Devs/Booking-vue.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umbrella-Devs/Booking-vue/issues"
+  },
+  "homepage": "https://github.com/Umbrella-Devs/Booking-vue#readme"
 }
