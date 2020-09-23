@@ -10,7 +10,6 @@
               v-model="flightSearch.flyFrom"
               clearable
               filterable
-              remote
               size="large"
               prefix-icon="el-icon-location-outline"
               placeholder="City or airport from"
@@ -34,7 +33,6 @@
               v-model="flightSearch.flyTo"
               clearable
               filterable
-              remote
               size="large"
               prefix-icon="el-icon-location-outline"
               placeholder="City or airport to"
@@ -152,6 +150,25 @@
                   </el-radio-button>
                 </el-radio-group>
               </el-col>
+              <el-col>
+                <el-form-item label="Select Cabin" label-position="top">
+                  <el-select v-model="flightSearch.selectedCabins" placeholder="Select"
+                  clearable
+                  filterable
+                  remote
+                  size="large"
+                  class="fluid">
+                  <el-option
+                    v-for="item in cabin_seats"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                    <span style="float: left">  {{ item.label }} </span>
+                  </el-option>
+                  </el-select>
+                </el-form-item>
+              </el-col>
+
               <el-col :span="12" class="text-right">
                 <router-link :to="'/flights/' + 
                   flightSearch.typeFlight + '/' +
@@ -163,9 +180,11 @@
                   flightSearch.returnFrom + '/' +
                   flightSearch.passenger.adults + '/' +
                   flightSearch.passenger.children + '/' +
-                  flightSearch.passenger.infants">
+                  flightSearch.passenger.infants + '/' +
+                  flightSearch.selectedCabins">
                 <el-button
                   type="primary"
+                  :loading="true"
                   icon="search"
                   size="large"
                   @click="submitSearch(flightSearch)">Search</el-button>
@@ -179,6 +198,8 @@
   </el-form>
 </template>
 
+
+
 <script>
 import moment from 'moment'
 
@@ -190,8 +211,8 @@ export default {
   name: 'flight-search',
   data() {
     return {
-      departDate: currentDate(2),
-      returnDate: currentDate(3),
+      departDate: currentDate(3),
+      returnDate: currentDate(5),
       flightSearch: {
         typeFlight: 'oneway',
         flyFrom: 'Kigali',
@@ -204,7 +225,8 @@ export default {
           adults: 1,
           children: 0,
           infants: 0,
-        }
+        },
+        selectedCabins: 'Economy'
       },
       quickPicker: {
         shortcuts: [{
@@ -237,6 +259,21 @@ export default {
       },
       disableReturn: true,
       loading: false,
+
+      cabin_seats: [{
+          value: 'M',
+          label: 'Economy'
+        }, {
+          value: 'W',
+          label: 'Economy premium'
+        }, {
+          value: 'C',
+          label: 'Business'
+        }, {
+          value: 'F',
+          label: 'First class'
+        }],
+
       places:
       //  [
       //   {id: 'KGL', value: 'Kigali', parentId: ''},

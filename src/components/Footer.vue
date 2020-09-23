@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-white  z-9999">
     <div class="copyright-text">
       Made with ❤ by <a href="http://umbrellagrp.rw/" target="_blank">Umbrella</a>
     </div>

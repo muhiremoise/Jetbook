@@ -20,7 +20,7 @@ export default new Router({
     { path: '/job/:page(\\d+)?', component: createListView('job') },
     { path: '/item/:id(\\d+)', component: ItemView },
     { path: '/user/:id', component: UserView },
-    { path: '/flights/:typeFlight/:flyFrom/:flyTo/:dateFrom/:dateTo/:returnFrom/:returnTo/:adults/:children/:infants', component: Flights },
+    { path: '/flights/:typeFlight/:flyFrom/:flyTo/:dateFrom/:dateTo/:returnFrom/:returnTo/:adults/:children/:infants/:selectedCabins', component: Flights },
     { path: '/', component: Home }
   ]
 })
