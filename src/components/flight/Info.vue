@@ -2,67 +2,44 @@
 	<div>
 		<el-row>
 			<el-col :span="2" align="middle" class="airline-logo">
-				<div 
-					v-for="(logo, index) in logoAirlines"
-					v-if="index < 2">
-					<img 
-						v-if="logoAirlines.length > 1"
-					 :src="logo.src"
-					 :alt="logo.name"
-					 :class="'logo logo-' + index" />
-					 <img v-else
-					 :src="logo.src"
-					 :alt="logo.name"
-					 class="logo single" />
+				<div v-for="(logo, index) in logoAirlines" :key="logo" >
+					<div v-if="index < 2">
+						<img v-if="logoAirlines.length > 1" :src="logo.src" :alt="logo.name" :class="'logo logo-' + index" />
+						<img v-else :src="logo.src" :alt="logo.name" class="logo single" />
+					</div>
 				</div>
 			</el-col>
 			<el-col :span="22">
 				<div class="flight-info">
-			    <div class="segments">
-			      <div class="segment departure">
-			        <time>
-			        	{{ firstFly.departTime }}
-			        </time>
-			        <span class="airport">
-			        	{{ firstFly.flyFrom }}
-			        </span>
-			      </div>
-			      <template 
-			      	v-for="(route, index) in info" 
-			      	v-if="index !== 0">
-				      <div class="divider">
-				      	<span class="plane"></span>
-				      </div>
-				      <div class="segment adaptive">
-				        <span class="airport">
-				        	{{ route.flyFrom }}
-				        </span>
-				      </div>
-			      </template>
-			      <div class="divider adaptive">
-			      	<span class="plane"></span>
-			      </div>
-			      <div class="segment destination">
-			        <time>
-			        	{{ lastFly.arriveTime }}
-			        </time>
-			        <span class="airport">
-			        	{{ lastFly.flyTo }}
-			        </span>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="flight-duration">
-			  	<span v-if="stops === 0">
-						Direct flight in {{ duration }}
-					</span>
-					<span v-else>
-						{{ stops }} stops in {{ duration }}
-					</span>  
-			  </div>
+			    	<div class="segments">
+			      		<div class="segment departure">
+			        		<time>{{ firstFly.departTime }}</time>
+			        		<span class="airport">{{ firstFly.flyFrom }}</span>
+			      		</div>
+			      		<template v-for="(route, index) in info">
+				      		<div class="divider" :key="route"  v-if="index !== 0">
+				      			<span class="plane"></span>
+				      		</div>
+				      		<div class="segment adaptive" :key="route">
+				        		<span class="airport">{{ route.flyFrom }}</span>
+				      		</div>
+			      		</template>
+			      		<div class="divider adaptive">
+			      			<span class="plane"></span>
+			      		</div>
+			      		<div class="segment destination">
+			        		<time>{{ lastFly.arriveTime }}</time>
+			        		<span class="airport">{{ lastFly.flyTo }}</span>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="flight-duration">
+			  		<span v-if="stops === 0">Direct flight in {{ duration }}</span>
+					<span v-else>{{ stops }} stops in {{ duration }}</span>  
+			  	</div>
 			</el-col>
 		</el-row>
-  </div>
+  	</div>
 </template>
 
 <script>

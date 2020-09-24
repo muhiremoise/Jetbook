@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="copyright-text">
-      Made with ❤ by <a href="https://www.conikal.com/" target="_blank">Conikal</a>
+      Made with ❤ by <a href="https://www.umbrellagrp.rw/" target="_blank">Umbrella</a>
     </div>
   </div>
 </template>

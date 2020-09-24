@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-for="(route, index) in routeFlight" class="timeline">
+		<div v-for="(route, index) in routeFlight" :key="route" class="timeline">
       <div v-if="index !== 0" class="timeline-stop">
         <i class="el-icon-shuffle"></i> Layover in {{ route.cityFrom }} for {{ route.layoverTime }}
       </div>

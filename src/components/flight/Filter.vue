@@ -2,7 +2,7 @@
 	<div>
 		<!-- sort flights -->
 		<div class="filter-sort">
-			<div v-for="option in sortOptions">
+			<div v-for="option in sortOptions" :key="option">
 				<input
 					type="radio"
 					v-model="sort"

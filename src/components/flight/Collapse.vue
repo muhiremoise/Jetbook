@@ -1,6 +1,5 @@
 <style>
-.collapse {
-}
+
 .collapse .collapse-header a {
   color: #475669;
 }
