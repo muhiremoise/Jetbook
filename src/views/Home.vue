@@ -1,11 +1,18 @@
 <template>
   <div>
-    <div class="container">
-      <div class="home-title">
-        <h1>Flights, no more, no less.</h1>
-      </div>
-      <flight></flight>
+    <div class="absolute bg-black" style="height: 600px">
+      <img class="clip-full opacity-40" src="/public/images/back.jpeg">
     </div>
+    <div class="container relative">
+      <div class="home-title text-center -mt-16">
+        <h1 class="text-4xl font-bold text-white">Plan tomorrow’s adventure today</h1>
+      </div>
+      <div class="bg-white px-3 py-2 rounded relative z-999">
+        <flight></flight>
+      </div>
+      
+    </div>
+    <!-- <div style="height:100px"></div> -->
   </div>
 </template>
 

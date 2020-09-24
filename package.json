@@ -1,7 +1,7 @@
 {
-  "name": "Jetbook",
+  "name": "sunnybook",
   "description": "Flight ticket book with Kiwi API + Vuejs",
-  "author": "Conikal <developer@conikal.com>",
+  "author": "Umbrella ( hello@umbrellagrp.rw )",
   "private": true,
   "scripts": {
     "dev": "node server",
@@ -15,18 +15,19 @@
     "npm": ">=4.0"
   },
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.20.0",
     "compression": "^1.7.1",
     "cross-env": "^5.1.1",
     "element-ui": "^2.13.2",
     "es6-promise": "^4.1.1",
-    "express": "^4.16.2",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "firebase": "^6.0.2",
     "lru-cache": "^4.1.1",
     "moment": "^2.17.1",
+    "node-sass": "^4.14.1",
     "numeral": "^2.0.4",
-    "route-cache": "0.4.3",
+    "route-cache": "^0.4.5",
     "serve-favicon": "^2.4.5",
     "url-loader": "^0.5.8",
     "vue": "^2.5.13",
@@ -38,6 +39,8 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -46,6 +49,8 @@
     "buble-loader": "^0.4.1",
     "chokidar": "^1.7.0",
     "css-loader": "^0.28.7",
+    "eslint": "^7.9.0",
+    "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^1.1.5",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
@@ -61,5 +66,16 @@
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.1.1",
     "webpack-node-externals": "^1.6.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umbrella-Devs/Booking-vue.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umbrella-Devs/Booking-vue/issues"
+  },
+  "homepage": "https://github.com/Umbrella-Devs/Booking-vue#readme"
 }

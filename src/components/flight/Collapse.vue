@@ -1,5 +1,4 @@
 <style>
-
 .collapse .collapse-header a {
   color: #475669;
 }

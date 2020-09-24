@@ -16,7 +16,7 @@ export default {
   },
 
   call(method, params = {}) {
-    const defaultParams = { v: 2, partner: 'picky', partner_market: 'vn' };
+    const defaultParams = { v: 3, partner: 'sunnyvoyagesunnyvoyage', partner_market: 'vn' };
     const queryParams = { arrayFormat: 'brackets' };
     const url = API + method;
 

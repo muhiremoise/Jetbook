@@ -52,6 +52,7 @@ function fetchFlight (store) {
 		adults: paramsRoute.adults,
 		children: paramsRoute.children,
 		infants: paramsRoute.infants,
+		selectedCabins: paramsRoute.selectedCabins,
 		sort: 'quality'
 	}
 
